@@ -1,0 +1,64 @@
+.emoji {
+  font-size: 2rem; /* หรือใหญ่กว่านี้ตามต้องการ */
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border: 0;
+  background-color: transparent;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}
+
+.emoji.selected {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.section-box {
+  border-radius: 20px;
+  background: rgba(255,232,239, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.emoji.dimmed {
+  opacity: 0.3;
+}
+
+.emoji-label {
+  font-size: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute; /* ให้ลอย */
+  top: 85%; /* อยู่ใต้ emoji */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none; /* ไม่รบกวน hover */
+
+}
+
+.emoji:hover .emoji-label {
+  opacity: 1;
+}
+.custom-note-textarea {
+  background-color: #FFE8EF;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 0.7rem;
+  width: 100%;
+  resize: none; /* ป้องกันไม่ให้ลากขยายกล่องได้ */
+  box-shadow: none;
+  outline: none;
+  color: #4b3f4e;
+}
+
+.custom-note-textarea::placeholder {
+  color: #a49aa0;
+}
+
+.custom-note-textarea:focus{
+  background-color: #fbecf0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 135, 192, 0.25);
+}

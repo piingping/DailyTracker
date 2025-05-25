@@ -1,0 +1,27 @@
+.lily-script-one-regular {
+  font-family: "Lily Script One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dynapuff {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400; /* หรือ 500, 600 ตามที่ใช้จริง */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.submit-btn {
+    background-color: #F564A9;
+    color: #F8F8E1;
+    border: none;
+    font-size: 26px;
+    border-radius: 999px;
+}
+
+.submit-btn:hover{
+  background-color: #f1539f;
+  color: bisque;
+}
+

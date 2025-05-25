@@ -1,0 +1,74 @@
+.lily-script-one-regular {
+  font-family: "Lily Script One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dynapuff {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400; /* หรือ 500, 600 ตามที่ใช้จริง */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.bg-pink {
+  background-color: #ffd1dc;
+ 
+}
+
+.text-pink {
+  color: #E83389;
+}
+.text-danger {
+    font-size: 14px;
+}
+
+.gradient-line {
+  height: 2px;
+  width: 80%;
+  
+  background-image: linear-gradient(to right, #FBC1D0, #E83389, #FBC1D0);
+  border-radius: 999px;
+  margin: 0 auto;
+}
+
+.btn-pink {
+  background-color: #ff5ca2;
+  color: #ffffe1;
+  border-radius: 100px;
+}
+
+.btn-pink:hover {
+  background-color: #ff3380;
+  color:#ffffe1
+}
+
+.login-box {
+  background-color: rgba(255, 230, 238, 0.5); 
+  
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.purple {
+  color: #533b4d;
+}
+
+.form-control {
+  border-radius: 100px;
+  background-color: #FFE8EF;
+  border: none;
+}
+
+.form-control:focus{
+  background-color: #fbecf0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 135, 192, 0.25);
+ 
+}
+
+.input-group-text {
+  border-radius: 100px;
+  background-color: #fbc1d0;
+  width: 50px;
+  justify-content: center;
+}
