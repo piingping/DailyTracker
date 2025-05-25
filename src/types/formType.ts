@@ -9,7 +9,7 @@ export interface Expense {
 export const formSchema = z.object({
   date: z.string().min(1, { message: "Please select a date." }),
   mood: z.string().min(1, { message: "Tell me how you feel" }),
-  note: z.string().min(1, { message: "Please Tell us about your day." }).max(50, { message: "Please keep it within 50 characters." }),
+  note: z.string().min(1, { message: "Please Tell us about your day." }).max(100, { message: "Please keep it within 100 characters." }),
   todo: z.array(
     z.object({
       text: z.string().min(1).max(30, {message: 'Please keep it within 30 characters.'}),

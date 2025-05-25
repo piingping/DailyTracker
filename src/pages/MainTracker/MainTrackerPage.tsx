@@ -8,6 +8,8 @@ import TodoList from "../../components/TodoList/TodoList";
 import WakeTimenSleep from "../../components/WakeTimenSleep/WakeTimenSleep";
 import "./MainTrackerPage.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function MainTrackerPage() {
   const {
@@ -19,7 +21,7 @@ function MainTrackerPage() {
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      date: "",
+      date: undefined,
       mood: "",
       note: "",
       wakeUpTime: "",
@@ -27,15 +29,26 @@ function MainTrackerPage() {
       todo: [],
     },
   });
+  const navigate = useNavigate();
 
   const onSubmit = (data: FormData) => {
-  console.log("Submitted:", data);
-};
+    console.log("Submitted:", data);
+    const existing = JSON.parse(localStorage.getItem("trackerRecords") || "[]");
+    const updated = [...existing, data];
+    localStorage.setItem("trackerRecords", JSON.stringify(updated));
+    console.log("✅ SAVED:", updated);
+    navigate("/record");
+  };
 
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const username = user.username || "friend"; // ✅ fallback ถ้าไม่มีชื่อ
 
   return (
     <div className="vh-100  d-flex flex-column align-items-center justify-content-start p-4">
-      <form className=" w-auto container mx-0 " onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className=" w-auto container mx-0 "
+        onSubmit={handleSubmit(onSubmit)}
+      >
         {/* Navbar title */}
         <Link to="/" style={{ textDecoration: "none" }}>
           <h1
@@ -47,7 +60,7 @@ function MainTrackerPage() {
         </Link>
         <div className="gradient-line mb-4 "> &nbsp;</div>
         <div>
-          <DatePicker register={register} errors={errors} />
+          <DatePicker register={register} errors={errors} username={username}/>
         </div>
 
         <div className="row mb-3">

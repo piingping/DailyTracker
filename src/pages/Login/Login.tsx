@@ -35,8 +35,11 @@ function Login() {
 
   const onSubmit = (data: LoginData) => {
     console.log("Login info:", data);
-    navigate("/tracker", { state: { username: data.username } });
+    localStorage.setItem("user", JSON.stringify(data));
+    navigate("/record")
   };
+
+
 
   return (
     <div className="vh-100 d-flex flex-column align-items-center justify-content-start p-4">

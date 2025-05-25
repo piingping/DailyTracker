@@ -1,15 +1,13 @@
 import type { FieldErrors, UseFormRegister } from "react-hook-form";
 import type { FormData } from "../../types/formType";
-import { useLocation } from "react-router-dom";
 
 interface Props {
   register: UseFormRegister<FormData>;
   errors: FieldErrors<FormData>;
+  username: string;
 }
 
-function DatePicker({ register, errors }: Props) {
-  const location = useLocation();
-  const username = location.state?.username || "friend";
+function DatePicker({ register, errors, username }: Props) {
 
   return (
     <>
@@ -25,13 +23,14 @@ function DatePicker({ register, errors }: Props) {
                   id="date"
                   type="date"
                   className="form-control w-auto"
+                   {...register("date")}
                   placeholder="Select date"
                   style={{
                     backgroundColor: "rgba(255, 255, 255, 0.60)",
                     borderColor: "transparent",
                     color: "#533B4D",
                   }}
-                  {...register("date")}
+                 
                 />
               </div>
               <div>
