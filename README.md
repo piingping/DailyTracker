@@ -19,6 +19,7 @@ Records Page
 - 🗑 Delete specific records anytime
 - 🧠 Data saved in `localStorage`, separated per user
 - 🎨 UI interactions with SweetAlert2 and custom CSS animations
+- 📱 Responsive design – usable on mobile, tablet, and desktop
 
 ## 🛠 Technologies
 - React
@@ -27,7 +28,6 @@ Records Page
 - Zod - for schema validation
 - SweetAlert2
 - Bootstrap 5
-- [Custom CSS] – for animations and design polish
 
 ## 🚀 Getting Started
 ### Prerequisites
