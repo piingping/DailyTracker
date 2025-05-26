@@ -159,7 +159,7 @@ function RecordPage() {
         <button
           className="btn dynapuff btn-back-to-login"
 
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/")}
         >
           Back to Login
         </button>
