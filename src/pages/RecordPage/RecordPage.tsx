@@ -78,7 +78,8 @@ function RecordPage() {
       </button>
 
       <div className="container">
-        <div className="row justify-content-center gap-4">
+        <div className="d-flex flex-wrap justify-content-center align-items-start gap-4">
+
           {records.length === 0 ? (
             <p className="text-muted dynapuff text-center">
               No records yet. Start recording your day 💗
@@ -109,7 +110,7 @@ function RecordPage() {
                     }}
                   />
 
-                  <h5 className="fw-bold mb-1">{formatDate(rec.date)}</h5>
+                  <h5 className="fw-bold mb-1 lily-script-one-regular">{formatDate(rec.date)}</h5>
                 </div>
                 <p className="mb-1">
                   {rec.mood === "Excellent" && "😄 Awesome!"}
@@ -127,10 +128,10 @@ function RecordPage() {
                 </p>
 
                 <button
-                  className="btn btn-sm btn-outline-secondary mt-2 mb-2"
+                  className="btn-underline-animated mt-2 mb-2"
                   onClick={() => toggleTodos(index)}
                 >
-                  {showTodos[index] ? "Hide To-dos" : "Show To-dos"}
+                  {showTodos[index] ? "▼ Hide To-dos" : "► Show To-dos"}
                 </button>
 
                 {showTodos[index] && (
