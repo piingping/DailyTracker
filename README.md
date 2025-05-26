@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# 🧸 Daily Tracker｡:*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cute and simple web application for tracking your daily routines, mood, sleep, and tasks — all in one place. Built with React + TypeScript and styled with a soft pink aesthetic.
 
-Currently, two official plugins are available:
+## 📸 Screenshot
+Form Page
+![Form Page](./public/screenshots/FillTheForm.jpeg)
+Records Page
+![Record Page](./public/screenshots/RecordsPage.jpeg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 🌤 Record your mood, wake-up time, and sleep hours
+- ✅ Create to-do lists for each day
+- 💬 Add notes to reflect on your day
+- 📅 View all past entries in the **Record Page**
+- 🗑 Delete specific records anytime
+- 🧠 Data saved in `localStorage`, separated per user
+- 🎨 UI interactions with SweetAlert2 and custom CSS animations
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Technologies
+- React
+- TypeScript
+- React Hook Form
+- Zod - for schema validation
+- SweetAlert2
+- Bootstrap 5
+- [Custom CSS] – for animations and design polish
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
+### Prerequisites
+- [Node.js](https://nodejs.org/)  (v20.12.2)
+- [npm](https://www.npmjs.com/)  (v10.5.0)
+- [Git](https://git-scm.com/)  (v2.40+)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Clone and Run
+```bash
+git clone https://github.com/yourusername/daily-tracker.git
+cd daily-tracker
+npm install
+npm start
+
