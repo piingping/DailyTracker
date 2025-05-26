@@ -74,7 +74,7 @@ function RecordPage() {
         className="btn btn-pink px-4 py-2 mb-4 dynapuff"
         onClick={handleStartTracking}
       >
-        here
+        + here
       </button>
 
       <div className="container">
@@ -113,7 +113,7 @@ function RecordPage() {
                     }}
                   />
 
-                  <h5 className="fw-bold mb-1 lily-script-one-regular">{formatDate(rec.date)}</h5>
+                  <h5 className="fw-bold mb-1 lily-script-one-regular " style={{color:'#E83389'}}>{formatDate(rec.date)}</h5>
                 </div>
                 <p className="mb-1">
                   {rec.mood === "Excellent" && "😄 Awesome!"}
@@ -155,9 +155,9 @@ function RecordPage() {
           )}
         </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-5 ">
         <button
-          className="btn dynapuff btn-back-to-login"
+          className="btn dynapuff btn-back-to-login mb-5"
 
           onClick={() => navigate("/")}
         >
