@@ -37,8 +37,8 @@ Records Page
 
 ### Clone and Run
 ```bash
-git clone https://github.com/yourusername/daily-tracker.git
+git clone https://github.com/piingping/daily-tracker.git
 cd daily-tracker
 npm install
-npm start
+npm run dev
 
