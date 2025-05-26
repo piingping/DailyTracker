@@ -1,5 +1,5 @@
 .emoji {
-  font-size: 2rem; /* หรือใหญ่กว่านี้ตามต้องการ */
+  font-size: 2rem; 
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
   border: 0;
@@ -29,12 +29,12 @@
   font-size: 0.5rem;
   opacity: 0;
   transition: opacity 0.2s ease;
-  position: absolute; /* ให้ลอย */
-  top: 85%; /* อยู่ใต้ emoji */
+  position: absolute; 
+  top: 85%; 
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  pointer-events: none; /* ไม่รบกวน hover */
+  pointer-events: none; 
 
 }
 
@@ -48,7 +48,7 @@
   padding: 10px 16px;
   font-size: 0.7rem;
   width: 100%;
-  resize: none; /* ป้องกันไม่ให้ลากขยายกล่องได้ */
+  resize: none; 
   box-shadow: none;
   outline: none;
   color: #4b3f4e;

@@ -1,0 +1,13 @@
+.btn-back-to-login {
+  border-radius: 100px;
+  border: 2px solid #E83389;
+  background-color: transparent;
+  color: #E83389;
+  padding: 8px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-back-to-login:hover {
+  background-color: #E83389;
+  color: white;
+}

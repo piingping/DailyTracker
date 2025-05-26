@@ -7,7 +7,7 @@
 .dynapuff {
   font-family: "DynaPuff", system-ui;
   font-optical-sizing: auto;
-  font-weight: 400; /* หรือ 500, 600 ตามที่ใช้จริง */
+  font-weight: 400; 
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
@@ -18,10 +18,24 @@
     border: none;
     font-size: 26px;
     border-radius: 999px;
+    
 }
 
 .submit-btn:hover{
   background-color: #f1539f;
   color: bisque;
+}
+
+.btn-back {
+  border-radius: 100px;
+  border: 3px solid #F564A9;
+  background-color: transparent;
+  color: #F564A9;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #F564A9;
+  color: white;
 }
 
