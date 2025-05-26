@@ -85,7 +85,10 @@ function RecordPage() {
               No records yet. Start recording your day 💗
             </p>
           ) : (
-            records.map((rec, index) => (
+            records
+             .slice()
+             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .map((rec, index) => (
               <div
                 key={index}
                 className="p-3 rounded shadow-sm position-relative w-auto"
